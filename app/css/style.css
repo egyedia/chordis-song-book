@@ -205,9 +205,6 @@ i.jstree-icon.c {
 i.jstree-icon.l {
   background-image: url('../i/l.png');
 }
-#songContainerTop {
-  height: 15px;
-}
 #songContainer {
   white-space: pre-wrap;
   font-family: monospace;

@@ -8,7 +8,7 @@
           ng-if="vm.song.year">({{vm.song.year}})</span></h3>
 
       <h2>{{vm.song.title}}</h2>
-      <h4><a href="/browse/{{vm.song.folderid}}"><i class="font-svg-folder h4"></i> {{vm.song.path}}</a></h4>
+      <h4 id="songContainerTop"><a href="/browse/{{vm.song.folderid}}"><i class="font-svg-folder h4"></i> {{vm.song.path}}</a></h4>
     </div>
   </div>
 
@@ -16,7 +16,6 @@
   <div class="row-fluid">
     <div class="col-md-12">
 
-      <div id="songContainerTop"></div>
       <div id="songContainer">
         <div id="songText" ng-style="{'font-size': vm.songFontSize + 'em'}">
           <div ng-repeat="sm in vm.content.songLines">
