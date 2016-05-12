@@ -1,0 +1,50 @@
+<div ng-class="{'container-fluid': $root.fluid, 'container': !$root.fluid}">
+
+  <div ng-class="{'row-fluid': $root.fluid, 'row': !$root.fluid}">
+
+    <div class="col-md-12">
+      <h1 class="page-header" translate>g.reindexData</h1>
+    </div>
+
+  </div>
+
+  <div ng-class="{'row-fluid': $root.fluid, 'row': !$root.fluid}">
+
+    <div class="col-md-12">
+
+      <a href="javascript://" ng-click="vm.reindexData()" translate>g.launchReindexData</a>
+
+      <br/>
+
+      <div class="tableWrapper">
+        <table class="reportTable">
+          <tr>
+            <td translate>g.reindexStarted</td>
+            <td>{{vm.reindexStarted}}</td>
+          </tr>
+          <tr>
+            <td translate>g.indexUpdated</td>
+            <td>{{vm.reindexResult.updated}}</td>
+          </tr>
+          <tr>
+            <td translate>g.reindexPhase</td>
+            <td>{{vm.reindexStatus.phase}}</td>
+          </tr>
+          <tr>
+            <td translate>g.reindexStep</td>
+            <td>{{vm.reindexStatus.step}}</td>
+          </tr>
+          <tr>
+            <td translate>g.reindexCount</td>
+            <td>{{vm.reindexStatus.count}}</td>
+          </tr>
+          <tr>
+            <td translate>g.reindexRunning</td>
+            <td>{{vm.reindexStatus.running}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

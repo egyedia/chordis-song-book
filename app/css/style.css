@@ -1,0 +1,343 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "chordy-song-book";
+  src: url("../fonts/chordy-song-book.eot");
+  src: url("../fonts/chordy-song-book.eot?#iefix") format("embedded-opentype"), url("../fonts/chordy-song-book.woff") format("woff"), url("../fonts/chordy-song-book.ttf") format("truetype"), url("../fonts/chordy-song-book.svg#chordy-song-book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "chordy-song-book" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="font-svg-"],
+[class*=" font-svg-"] {
+  display: inline-block;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+[class^="font-svg-"]:before,
+[class*=" font-svg-"]:before {
+  font-family: "chordy-song-book" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 60px;
+}
+.font-svg-chords:before {
+  content: "a";
+}
+.font-svg-home:before {
+  content: "b";
+}
+.font-svg-lyrics:before {
+  content: "c";
+}
+.font-svg-plus:before {
+  content: "d";
+}
+.font-svg-minus:before {
+  content: "e";
+}
+.font-svg-reset:before {
+  content: "g";
+}
+.font-svg-folder:before {
+  content: "h";
+}
+.font-svg-artist:before {
+  content: "i";
+}
+.font-svg-file:before {
+  content: "j";
+}
+.font-svg-up:before {
+  content: "f";
+}
+.font-svg-down:before {
+  content: "k";
+}
+.font-svg-x:before {
+  content: "l";
+}
+.font-svg-pin:before {
+  content: "m";
+}
+.font-svg-star-full:before {
+  content: "n";
+}
+.font-svg-star-empty:before {
+  content: "o";
+}
+.wordwrap {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Firefox */
+  white-space: -pre-wrap;
+  /* Opera <7 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* IE */
+}
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+  display: none;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.dropdown {
+  cursor: pointer;
+}
+a {
+  color: #aa5555;
+}
+html,
+body,
+#angular-views-entry {
+  height: 100%;
+}
+header {
+  background: #f0f0f0;
+  height: 50px;
+}
+.row {
+  height: 100%;
+}
+.col-md-4.no-float {
+  float: none;
+}
+.col-md-4 {
+  display: table-cell;
+  background: #eeeeee;
+  border: 1px solid #aaaaaa;
+  width: 33%;
+  padding: 0px;
+}
+.rTable {
+  display: table;
+  width: 100%;
+}
+.rTableRow {
+  display: table-row;
+}
+.rTableHeading {
+  display: table-header-group;
+  background-color: #ddd;
+}
+.rTableCell,
+.rTableHead {
+  display: table-cell;
+  padding: 3px 10px;
+  border: 1px solid #999999;
+}
+.rTableHeading {
+  display: table-header-group;
+  background-color: #ddd;
+  font-weight: bold;
+}
+.rTableFoot {
+  display: table-footer-group;
+  font-weight: bold;
+  background-color: #ddd;
+}
+.rTableBody {
+  display: table-row-group;
+}
+.pre {
+  white-space: pre;
+}
+.noBorderTableCell {
+  display: table-cell;
+  padding: 5px 10px 10px 10px;
+  border: 0px solid #999999;
+}
+table.reportTable {
+  border: 1px solid #eeeeee;
+  border-collapse: collapse;
+}
+table.reportTable td,
+table.reportTable th {
+  border: 1px solid #dddddd;
+  padding: 2px 5px 2px 5px;
+}
+table.reportTable i:before {
+  font-size: 12px;
+}
+div.tableWrapper {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0px 0px 2px #aaaaaa;
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  background-color: #eeeeee;
+}
+i.jstree-icon.f {
+  background-image: url('../i/f.png');
+}
+i.jstree-icon.c {
+  background-image: url('../i/c.png');
+}
+i.jstree-icon.l {
+  background-image: url('../i/l.png');
+}
+#songContainerTop {
+  height: 15px;
+}
+#songContainer {
+  white-space: pre-wrap;
+  font-family: monospace;
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  background-color: #eeeeee;
+  line-height: 0px;
+}
+#songText {
+  border: 0px solid #ffffff;
+  line-height: 0px;
+}
+#scrollToTop {
+  position: fixed;
+  right: 40px;
+  bottom: 10px;
+  opacity: 0.5;
+}
+#increaseFont {
+  position: fixed;
+  right: 40px;
+  top: 55px;
+  opacity: 0.5;
+}
+#resetFont {
+  position: fixed;
+  right: 40px;
+  top: 110px;
+  opacity: 0.5;
+}
+#decreaseFont {
+  position: fixed;
+  right: 40px;
+  top: 165px;
+  opacity: 0.5;
+}
+#showChordsLayer {
+  position: fixed;
+  right: 50px;
+  top: 240px;
+  opacity: 0.5;
+}
+#increaseChordFont {
+  position: fixed;
+  right: 115px;
+  top: 65px;
+  opacity: 0.5;
+}
+#increaseChordFont i:before {
+  font-size: 40px;
+  color: #5555aa;
+}
+#resetChordFont {
+  position: fixed;
+  right: 115px;
+  top: 120px;
+  opacity: 0.5;
+}
+#resetChordFont i:before {
+  font-size: 40px;
+  color: #5555aa;
+}
+#decreaseChordFont {
+  position: fixed;
+  right: 115px;
+  top: 175px;
+  opacity: 0.5;
+}
+#decreaseChordFont i:before {
+  font-size: 40px;
+  color: #5555aa;
+}
+#hideChordsLayer {
+  position: fixed;
+  right: 115px;
+  top: 230px;
+  opacity: 0.5;
+}
+#hideChordsLayer i:before {
+  font-size: 40px;
+  color: #5555aa;
+}
+#pinChordsLayer {
+  position: fixed;
+  right: 115px;
+  top: 285px;
+  opacity: 0.5;
+}
+#pinChordsLayer i:before {
+  font-size: 40px;
+  color: #5555aa;
+}
+div.songChordLine {
+  color: #aa5555;
+  font-weight: bold;
+}
+div.songLine {
+  font-size: 1em;
+  line-height: 125%;
+}
+div.chordLine {
+  color: #5555aa;
+  font-weight: bold;
+  line-height: 200%;
+  -moz-tab-size: 6;
+    -o-tab-size: 6;
+       tab-size: 6;
+}
+#chordContainer {
+  white-space: pre-wrap;
+  font-family: monospace;
+  border: 1px solid #cccccc;
+  background-color: #dddddd;
+  padding: 10px;
+  right: 110px;
+  top: 60px;
+  color: #aa5555;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 0px;
+  padding-right: 60px;
+}
+#chordContainer .stanza {
+  margin-bottom: 20px;
+  border: 1px solid #bbbbbb;
+  padding: 10px;
+}
+i.h4:before {
+  font-size: 16px;
+}
+i.h3:before {
+  font-size: 20px;
+}

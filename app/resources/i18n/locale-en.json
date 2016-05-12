@@ -1,0 +1,47 @@
+{
+  "product": {
+    "title": "Chordis Song Book"
+  },
+  "menu": {
+    "title": "Chordis Song Book"
+  },
+  "g": {
+    "searchQuick": "Quick Search",
+    "searchByArtist": "Search by Artist",
+    "settings" : "Settings",
+    "browse": "Browse",
+    "artists": "Artists",
+    "songs": "Songs",
+    "reindex": "Reindex",
+    "artist": "Artist",
+    "count": "Song Count",
+    "artistList": "List of artists",
+    "titleList": "List of songs",
+    "title": "Title",
+    "path": "Path",
+    "name": "Filename",
+    "folderAndFileTree": "Browse collection",
+    "tree": "Song Collection",
+    "searchQuick": "Quick Search",
+    "searchTerm": "Search:",
+    "launchReindexData": "Launch Data Reindex",
+    "reindexData": "Reindex data",
+    "reallyReindex": "Do you really want to reindex the data? This can take several minutes!",
+    "reindexStarted": "Reindex started",
+    "reindexPhase": "Phase",
+    "reindexStep": "Step",
+    "reindexCount": "Count",
+    "reindexRunning": "Running",
+    "contentType": "Type",
+    "indexUpdated": "Index Updated",
+    "searchByArtist": "Search by Artist",
+    "scrollToTop":"Scroll to Song Top (Shortcut: T)",
+    "increaseSongFont":"Increase Song Size (Shortcut: Q)",
+    "resetSongFont":"Reset Song Size (Shortcut: W or R)",
+    "decreaseSongFont":"Decrease Song Size (Shortcut: E)",
+    "increaseChordFont":"Increase Chord Size (Shortcut: A)",
+    "resetChordFont":"Reset Chord Size (Shortcut: S or R)",
+    "decreaseChordFont":"Decrease Chord Size (Shortcut: D)",
+    "pinChordsLayer":"Pin Chord Layer"
+  }
+}

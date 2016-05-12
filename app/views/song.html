@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-md-12">
+
+      <h3 class="page-header"><a href="/search-by-artist/{{vm.song.artist}}"
+          ng-if="vm.song.artist"><i class="font-svg-artist h3"></i> {{vm.song.artist}}</a><span
+          ng-if="vm.song.album"> - <a href='"{{vm.song.album}}"'>{{vm.song.album}}</a></span> <span
+          ng-if="vm.song.year">({{vm.song.year}})</span></h3>
+
+      <h2>{{vm.song.title}}</h2>
+      <h4><a href="/browse/{{vm.song.folderid}}"><i class="font-svg-folder h4"></i> {{vm.song.path}}</a></h4>
+    </div>
+  </div>
+
+
+  <div class="row-fluid">
+    <div class="col-md-12">
+
+      <div id="songContainerTop"></div>
+      <div id="songContainer">
+        <div id="songText" ng-style="{'font-size': vm.songFontSize + 'em'}">
+          <div ng-repeat="sm in vm.content.songLines">
+            <div class='songLine' ng-class="{'songChordLine': sm.isChordLine}">{{sm.line}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="scrollToTop">
+        <a href="javascript://" ng-click="vm.scrollToTop()" title="{{'g.scrollToTop' | translate}}"><i
+            class="font-svg-up"></i></a>
+      </div>
+      <div id="increaseFont">
+        <a href="javascript://" ng-click="vm.increaseSongFont()" title="{{'g.increaseSongFont' | translate}}"><i
+            class="font-svg-plus"></i></a>
+      </div>
+      <div id="resetFont">
+        <a href="javascript://" ng-click="vm.resetSongFont()" title="{{'g.resetSongFont' | translate}}"><i
+            class="font-svg-reset"></i></a>
+      </div>
+      <div id="decreaseFont">
+        <a href="javascript://" ng-click="vm.decreaseSongFont()" title="{{'g.decreaseSongFont' | translate}}"><i
+            class="font-svg-minus"></i></a>
+      </div>
+      <div id="showChordsLayer" ng-if="!vm.chordLayerVisible">
+        <a href="javascript://" ng-click="vm.showChordsLayer()" title="{{'g.showChordsLayer' | translate}}"><i
+            class="font-svg-chords"></i></a>
+      </div>
+
+      <!--<div id="chordContainer" ng-style="{'font-size': vm.chordFontSize + 'em'}">
+        <div ng-repeat="sm in vm.content.chordLines" class="chordLine" >{{sm.line}}</div>
+      </div>-->
+
+      <div id="chordContainer" ng-style="{'font-size': vm.chordFontSize + 'em', 'position':vm.chordLayerPosition}" ng-if="vm.chordLayerVisible">
+        <div ng-repeat="stanza in vm.content.stanzas" class="stanza">
+          <div ng-repeat="cl in stanza.lines" class="chordLine">{{cl.line}}</div>
+        </div>
+        <div id="increaseChordFont">
+          <a href="javascript://" ng-click="vm.increaseChordFont()" title="{{'g.increaseChordFont' | translate}}"><i
+              class="font-svg-plus"></i></a>
+        </div>
+        <div id="resetChordFont">
+          <a href="javascript://" ng-click="vm.resetChordFont()" title="{{'g.resetChordFont' | translate}}"><i
+              class="font-svg-reset"></i></a>
+        </div>
+        <div id="decreaseChordFont">
+          <a href="javascript://" ng-click="vm.decreaseChordFont()" title="{{'g.decreaseChordFont' | translate}}"><i
+              class="font-svg-minus"></i></a>
+        </div>
+        <div id="hideChordsLayer">
+          <a href="javascript://" ng-click="vm.hideChordsLayer()" title="{{'g.hideChordsLayer' | translate}}"><i
+              class="font-svg-x"></i></a>
+        </div>
+        <div id="pinChordsLayer">
+          <a href="javascript://" ng-click="vm.toggleChordLayerPinned()" title="{{'g.pinChordsLayer' | translate}}"><i
+              class="font-svg-pin"></i></a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
