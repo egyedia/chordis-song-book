@@ -8,7 +8,7 @@
   "g": {
     "searchQuick": "Quick Search",
     "searchByArtist": "Search by Artist",
-    "settings" : "Settings",
+    "settings": "Settings",
     "browse": "Browse",
     "artists": "Artists",
     "songs": "Songs",
@@ -35,13 +35,15 @@
     "contentType": "Type",
     "indexUpdated": "Index Updated",
     "searchByArtist": "Search by Artist",
-    "scrollToTop":"Scroll to Song Top (Shortcut: T)",
-    "increaseSongFont":"Increase Song Size (Shortcut: Q)",
-    "resetSongFont":"Reset Song Size (Shortcut: W or R)",
-    "decreaseSongFont":"Decrease Song Size (Shortcut: E)",
-    "increaseChordFont":"Increase Chord Size (Shortcut: A)",
-    "resetChordFont":"Reset Chord Size (Shortcut: S or R)",
-    "decreaseChordFont":"Decrease Chord Size (Shortcut: D)",
-    "pinChordsLayer":"Pin Chord Layer"
+    "scrollToTop": "Scroll to Song Top (Shortcut: T)",
+    "increaseSongFont": "Increase Song Size (Shortcut: Q)",
+    "resetSongFont": "Reset Song Size (Shortcut: W or R)",
+    "decreaseSongFont": "Decrease Song Size (Shortcut: E)",
+    "showChordsLayer": "Show Chords Layer (Shortcut: C)",
+    "increaseChordFont": "Increase Chord Size (Shortcut: A)",
+    "resetChordFont": "Reset Chord Size (Shortcut: S or R)",
+    "decreaseChordFont": "Decrease Chord Size (Shortcut: D)",
+    "hideChordsLayer": "Hide Chords Layer (Shortcut: C)",
+    "pinChordsLayer": "Pin Chord Layer"
   }
 }
