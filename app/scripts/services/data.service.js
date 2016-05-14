@@ -5,14 +5,15 @@
       .module('csbApp')
       .service('DataService', DataService);
 
-  DataService.$inject = ['RestCallBuilder', 'UrlService', '$rootScope'];
+  DataService.$inject = ['RestCallBuilder', 'UrlService', '$rootScope', '$translate'];
 
-  function DataService(RestCallBuilder, UrlService, $rootScope) {
+  function DataService(RestCallBuilder, UrlService, $rootScope, $translate) {
 
     var service = {};
 
-    service.init = function () {
+    service.init = function (pageTitleKey) {
       $rootScope.songController = null;
+      $rootScope.pageTitle = $translate.instant(pageTitleKey);
     };
 
     service.loadArtists = function () {
@@ -21,6 +22,10 @@
 
     service.loadTitles = function () {
       return RestCallBuilder.get(UrlService.loadTitles());
+    };
+
+    service.loadRatings = function () {
+      return RestCallBuilder.get(UrlService.loadRatings());
     };
 
     service.loadFolderAndFileTree = function () {
@@ -45,6 +50,14 @@
 
     service.song = function (songId) {
       return RestCallBuilder.get(UrlService.song(songId));
+    };
+
+    service.updateRating = function (hash, rating) {
+      var putData = {
+	"hash": hash,
+	"rating": rating
+	};
+      return RestCallBuilder.get(UrlService.rating(hash, rating));
     };
 
     return service;

@@ -28,6 +28,9 @@
         <a href="javascript://" ng-click="vm.scrollToTop()" title="{{'g.scrollToTop' | translate}}"><i
             class="font-svg-up"></i></a>
       </div>
+
+      <div id="songRatings"><i class="font-svg-star-full" ng-repeat="n in [] | times:vm.song.rating"></i></div>
+
       <div id="increaseFont">
         <a href="javascript://" ng-click="vm.increaseSongFont()" title="{{'g.increaseSongFont' | translate}}"><i
             class="font-svg-plus"></i></a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title translate="product.title">CSB</title>
+  <title>{{'product.title' | translate}} - {{$root.pageTitle}}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
@@ -38,14 +38,17 @@
 <script src="scripts/app.js"></script>
 <script src="scripts/app-config.js"></script>
 <script src="scripts/app-run.js"></script>
+
 <script src="scripts/controllers/search-quick.js"></script>
 <script src="scripts/controllers/artist-list.js"></script>
 <script src="scripts/controllers/title-list.js"></script>
+<script src="scripts/controllers/rating-list.js"></script>
 <script src="scripts/controllers/folder-and-file-tree.js"></script>
 <script src="scripts/controllers/search-quick.js"></script>
 <script src="scripts/controllers/search-by-artist.js"></script>
 <script src="scripts/controllers/reindex-data.js"></script>
 <script src="scripts/controllers/song.js"></script>
+
 <script src="scripts/constants.js"></script>
 
 <script src="scripts/services/data.service.js"></script>
@@ -53,6 +56,8 @@
 <script src="scripts/services/rest.call.builder.js"></script>
 <script src="scripts/services/key.service.js"></script>
 <script src="scripts/services/song.service.js"></script>
+
+<script src="scripts/filters/times.filter.js"></script>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
   function ArtistListController(DataService) {
     var vm = this;
 
-    DataService.init();
+    DataService.init('g.artistList');
 
     DataService.loadArtists().then(function (response) {
       vm.artistList = response.data;

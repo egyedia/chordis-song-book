@@ -153,18 +153,20 @@ div.tableWrapper {
   background-color: #eeeeee;
 }
 
-i {
-  &.jstree-icon {
-    &.f {
-      background-image: url('../i/f.png');
-    }
-    &.c {
-      background-image: url('../i/c.png');
-    }
-    &.l {
-      background-image: url('../i/l.png');
-    }
+i.jstree-icon {
+  &.font-svg-chords {
+    color: #cc0000;
   }
+  &.font-svg-lyrics {
+    color: #255fcc;
+  }
+  &.font-svg-folder2 {
+    color: #c27e20;
+  }
+}
+
+#jsTree i:before {
+  font-size:16px;
 }
 
 #songContainerTop {
@@ -318,4 +320,24 @@ i.h4:before {
 
 i.h3:before {
   font-size: 20px;
+}
+
+div.ratings {
+  white-space: nowrap;
+  i:before {
+    font-size: 12px;
+    color: #aa0000;
+  }
+}
+
+#songRatings {
+  position: fixed;
+  right: 120px;
+  bottom: 20px;
+  opacity: 0.5;
+  i:before {
+    font-size: 40px;
+    color: #aaaaaa;
+  }
+
 }

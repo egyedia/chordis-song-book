@@ -44,6 +44,11 @@
           controller  : 'TitleListController',
           controllerAs: 'vm'
         })
+        .when('/rating-list', {
+          templateUrl : 'views/rating-list.html',
+          controller  : 'RatingListController',
+          controllerAs: 'vm'
+        })
         .when('/reindex-data', {
           templateUrl : 'views/reindex-data.html',
           controller  : 'ReindexDataController',

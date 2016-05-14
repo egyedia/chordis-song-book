@@ -10,7 +10,7 @@
   function SearchByArtistController(DataService, $routeParams, $location) {
     var vm = this;
 
-    DataService.init();
+    DataService.init('g.searchByArtist');
 
     vm.searchTermChanged = function () {
       $location.path("/search-by-artist/" + vm.searchTerm);

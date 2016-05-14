@@ -9,6 +9,7 @@
     "searchQuick": "Quick Search",
     "searchByArtist": "Search by Artist",
     "settings": "Settings",
+    "ratings": "Rated Songs",
     "browse": "Browse",
     "artists": "Artists",
     "songs": "Songs",
@@ -44,6 +45,8 @@
     "resetChordFont": "Reset Chord Size (Shortcut: S or R)",
     "decreaseChordFont": "Decrease Chord Size (Shortcut: D)",
     "hideChordsLayer": "Hide Chords Layer (Shortcut: C)",
-    "pinChordsLayer": "Pin Chord Layer"
+    "pinChordsLayer": "Pin Chord Layer",
+    "ratingList": "List of Songs with Ratings",
+    "rating": "Rating"
   }
 }

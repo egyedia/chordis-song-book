@@ -85,14 +85,29 @@
       vm.saveState();
     };
 
-    if ($routeParams.songId != null) {
-      DataService.song($routeParams.songId).then(function (response) {
-        vm.song = response.data;
-        vm.content = SongService.parseSong(vm.song.content, vm.chordSpaceRatio);
-        $timeout(function () {
-          vm.scrollToTop();
-        });
+    vm.setRating = function (r) {
+      DataService.updateRating(this.song.hash, r).then(function (response) {
+        vm.songLoaded(response.data);
       });
+    };
+
+    vm.loadSong = function (songId) {
+      DataService.song(songId).then(function (response) {
+        vm.songLoaded(response.data);
+      });
+    };
+
+    vm.songLoaded = function (data) {
+      vm.song = data;
+      vm.content = SongService.parseSong(vm.song.content, vm.chordSpaceRatio);
+      $rootScope.pageTitle = vm.song.title;
+      $timeout(function () {
+        vm.scrollToTop();
+      });
+    }
+
+    if ($routeParams.songId != null) {
+      vm.loadSong($routeParams.songId);
     }
 
     vm.songFontSize = 1;

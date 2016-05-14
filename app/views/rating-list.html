@@ -3,7 +3,7 @@
   <div ng-class="{'row-fluid': $root.fluid, 'row': !$root.fluid}">
 
     <div class="col-md-12">
-      <h1 class="page-header" translate>g.searchQuick</h1>
+      <h1 class="page-header" translate>g.ratingList</h1>
     </div>
 
   </div>
@@ -15,30 +15,15 @@
       <div class="tableWrapper">
         <table class="reportTable">
           <tr>
-            <th translate>g.searchTerm</th>
-          </tr>
-          <tr>
-            <td>
-              ﻿<input type="text" ng-model="vm.searchTerm" ng-change="vm.searchTermChanged()" id="searchTerm"
-                ng-model-options='{ debounce: 500 }'/>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-      <br/>
-
-      <div class="tableWrapper">
-        <table class="reportTable">
-          <tr>
             <th translate>g.title</th>
             <th translate>g.artist</th>
             <th translate>g.path</th>
             <th translate>g.name</th>
+            <th translate>g.rating</th>
           </tr>
-          <tr ng-repeat="song in vm.searchResults">
+          <tr ng-repeat="song in vm.titleList">
             <td>
-              <a href="/song/{{song.id}}">
+              <a href="/song/{{song.fileid}}">
                 <i class="font-svg-chords" ng-if="song.contentType == 'chord'"></i>
                 <i class="font-svg-lyrics" ng-if="song.contentType == 'lyrics'"></i>
                 {{song.title}}</a>
@@ -53,9 +38,13 @@
               <i class="font-svg-file"></i>
               {{song.name}}
             </td>
+            <td>
+              <div class="ratings"><i class="font-svg-star-full" ng-repeat="n in [] | times:song.rating"></i></div>
+            </td>
           </tr>
         </table>
       </div>
+
     </div>
   </div>
 </div>

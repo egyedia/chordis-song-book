@@ -10,7 +10,7 @@
   function FolderAndFileTreeController(DataService, $routeParams, $anchorScroll, $location, $timeout) {
     var vm = this;
 
-    DataService.init();
+    DataService.init('g.folderAndFileTree');
 
     vm.candidateLocation = null;
 

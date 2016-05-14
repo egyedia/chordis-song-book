@@ -15,15 +15,13 @@
       <div class="tableWrapper">
         <table class="reportTable">
           <tr>
-            <th translate>g.artist</th>
             <th translate>g.title</th>
+            <th translate>g.artist</th>
             <th translate>g.path</th>
             <th translate>g.name</th>
+            <th translate>g.rating</th>
           </tr>
           <tr ng-repeat="song in vm.titleList">
-            <td>
-              <a href="/search-by-artist/{{song.artist}}"><i class="font-svg-artist"></i> {{song.artist}}</a>
-            </td>
             <td>
               <a href="/song/{{song.fileid}}">
                 <i class="font-svg-chords" ng-if="song.contentType == 'chord'"></i>
@@ -31,11 +29,17 @@
                 {{song.title}}</a>
             </td>
             <td>
+              <a href="/search-by-artist/{{song.artist}}"><i class="font-svg-artist"></i> {{song.artist}}</a>
+            </td>
+            <td>
               <a href="/browse/{{song.folderid}}"><i class="font-svg-folder"></i> {{song.path}}</a>
             </td>
             <td>
               <i class="font-svg-file"></i>
               {{song.name}}
+            </td>
+            <td>
+              <div class="ratings"><i class="font-svg-star-full" ng-repeat="n in [] | times:song.rating"></i></div>
             </td>
           </tr>
         </table>

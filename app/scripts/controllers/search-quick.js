@@ -10,7 +10,7 @@
   function SearchQuickController(DataService, $routeParams, $location) {
     var vm = this;
 
-    DataService.init();
+    DataService.init('g.searchQuick');
 
     vm.searchTermChanged = function () {
       $location.path("/" + vm.searchTerm);

@@ -10,7 +10,7 @@
   function TitleListController(DataService) {
     var vm = this;
 
-    DataService.init();
+    DataService.init('g.titleList');
 
     DataService.loadTitles().then(function (response) {
       vm.titleList = response.data;

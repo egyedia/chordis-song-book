@@ -9,8 +9,8 @@
 
   function UrlService($http, $location) {
 
-    var baseUrl = 'http://chordis-api.dubylon.com/';
-    //var baseUrl = 'http://chordis.dubylon.comx:2222/';
+    //var baseUrl = 'http://chordis-api.dubylon.com/';
+    var baseUrl = 'http://chordis-api.dubylon.comx:2222/';
     var service = {};
 
     service.loadArtists = function () {
@@ -19,6 +19,10 @@
 
     service.loadTitles = function () {
       return baseUrl + 'index.php?page=TitleListData';
+    };
+
+    service.loadRatings = function () {
+      return baseUrl + 'index.php?page=RatingListData';
     };
 
     service.loadFolderAndFileTree = function () {
@@ -43,6 +47,10 @@
 
     service.song = function (songId) {
       return baseUrl + 'index.php?page=SongData&id=' + songId;
+    };
+
+    service.rating = function (hash, rating) {
+      return baseUrl + 'index.php?page=RatingData&hash=' + hash + "&rating=" + rating;
     };
 
     return service;
