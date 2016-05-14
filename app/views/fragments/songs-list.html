@@ -4,7 +4,7 @@
       <th translate>g.title</th>
       <th translate>g.artist</th>
       <th translate>g.path</th>
-      <th translate>g.name</th>
+      <!--<th translate>g.name</th>-->
       <th translate>g.rating</th>
     </tr>
     <tr ng-repeat="song in vm.titleList">
@@ -20,10 +20,10 @@
       <td>
         <a href="/browse/{{song.folderid}}"><i class="font-svg-folder"></i> {{song.path}}</a>
       </td>
-      <td>
+      <!--<td>
         <i class="font-svg-file"></i>
         {{song.name}}
-      </td>
+      </td>-->
       <td>
         <div class="ratings">
           <i class="font-svg-star-full" ng-repeat="n in [] | times:song.rating"></i>
