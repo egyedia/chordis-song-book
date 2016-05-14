@@ -18,7 +18,7 @@
 
     vm.doSearch = function (term) {
       DataService.searchByArtist(term).then(function (response) {
-        vm.searchResults = response.data;
+        vm.titleList = response.data;
       });
     };
 
@@ -28,6 +28,6 @@
     } else {
       vm.searchTerm = "";
     }
-    jq("#searchTerm").focus();
+    //jq("#searchTerm").focus();
   }
 })();

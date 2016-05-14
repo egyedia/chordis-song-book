@@ -17,11 +17,15 @@
     service.chordSpaceRatio = null;
     service.stanzaList = null;
 
-    service.normalizeWhiteSpaces = function () {
+    service.normalizeWhiteSpaces = function (songTabSize) {
       // replace Windows and Mac newLines with Unix style ones
       this.content = this.content.replace(/(?:\r\n|\r)/g, "\n");
       // replace tabs with 8 spaces
-      this.content = this.content.replace(/\t/g, '        ');
+      var tabs = '';
+      for(var i=0; i<songTabSize; i++) {
+        tabs += ' ';
+      }
+      this.content = this.content.replace(/\t/g, tabs);
     };
 
     service.createLines = function () {
@@ -125,10 +129,10 @@
       stanza.compact += line.line + "-#-";
     };
 
-    service.parseSong = function (c, chordSpaceRatio) {
+    service.parseSong = function (c, chordSpaceRatio, songTabSize) {
       this.content = c;
       this.chordSpaceRatio = chordSpaceRatio;
-      this.normalizeWhiteSpaces();
+      this.normalizeWhiteSpaces(songTabSize);
       this.createLines();
       this.createChordLines();
       this.stripRepeatingStanzas();

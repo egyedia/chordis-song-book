@@ -23,7 +23,6 @@
     "name": "Filename",
     "folderAndFileTree": "Browse collection",
     "tree": "Song Collection",
-    "searchQuick": "Quick Search",
     "searchTerm": "Search:",
     "launchReindexData": "Launch Data Reindex",
     "reindexData": "Reindex data",
@@ -45,8 +44,11 @@
     "resetChordFont": "Reset Chord Size (Shortcut: S or R)",
     "decreaseChordFont": "Decrease Chord Size (Shortcut: D)",
     "hideChordsLayer": "Hide Chords Layer (Shortcut: C)",
+    "switchSongTabSize": "Switch Song Tab Size (Shortcut: B)",
     "pinChordsLayer": "Pin Chord Layer",
     "ratingList": "List of Songs with Ratings",
-    "rating": "Rating"
+    "rating": "Rating",
+    "search": "Search",
+    "exactMatch": "Exact Match"
   }
 }

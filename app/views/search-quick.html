@@ -19,8 +19,13 @@
           </tr>
           <tr>
             <td>
-              ﻿<input type="text" ng-model="vm.searchTerm" ng-change="vm.searchTermChanged()" id="searchTerm"
-                ng-model-options='{ debounce: 500 }'/>
+              <form ng-submit="vm.searchTermChanged()">
+                ﻿<input type="text" ng-model="vm.searchTerm" id="searchTerm"/>
+                <input type="submit" value="{{'g.search' | translate}}"/>
+                <br/>
+                <label for="exactMatch" translate>g.exactMatch</label> <input type="checkbox" ng-model="vm.exactMatch"
+                  id="exactMatch"/>
+              </form>
             </td>
           </tr>
         </table>
@@ -28,34 +33,8 @@
 
       <br/>
 
-      <div class="tableWrapper">
-        <table class="reportTable">
-          <tr>
-            <th translate>g.title</th>
-            <th translate>g.artist</th>
-            <th translate>g.path</th>
-            <th translate>g.name</th>
-          </tr>
-          <tr ng-repeat="song in vm.searchResults">
-            <td>
-              <a href="/song/{{song.id}}">
-                <i class="font-svg-chords" ng-if="song.contentType == 'chord'"></i>
-                <i class="font-svg-lyrics" ng-if="song.contentType == 'lyrics'"></i>
-                {{song.title}}</a>
-            </td>
-            <td>
-              <a href="/search-by-artist/{{song.artist}}"><i class="font-svg-artist"></i> {{song.artist}}</a>
-            </td>
-            <td>
-              <a href="/browse/{{song.folderid}}"><i class="font-svg-folder"></i> {{song.path}}</a>
-            </td>
-            <td>
-              <i class="font-svg-file"></i>
-              {{song.name}}
-            </td>
-          </tr>
-        </table>
-      </div>
+      <div ng-include="'views/fragments/songs-list.html'"></div>
+
     </div>
   </div>
 </div>

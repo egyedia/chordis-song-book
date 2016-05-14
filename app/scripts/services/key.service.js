@@ -51,6 +51,10 @@
             $timeout(function () {
               $rootScope.songController.toggleChordsLayer();
             });
+          } else if (e.which == 66) {
+            $timeout(function () {
+              $rootScope.songController.switchSongTabSize();
+            });
           } else if (e.which >= 48 && e.which <= 53) {
             $timeout(function () {
               $rootScope.songController.setRating(e.which-48);

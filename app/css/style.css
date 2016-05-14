@@ -1,13 +1,13 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "chordy-song-book";
-  src: url("../fonts/chordy-song-book.eot");
-  src: url("../fonts/chordy-song-book.eot?#iefix") format("embedded-opentype"), url("../fonts/chordy-song-book.woff") format("woff"), url("../fonts/chordy-song-book.ttf") format("truetype"), url("../fonts/chordy-song-book.svg#chordy-song-book") format("svg");
+  font-family: "chordis-song-book";
+  src: url("../fonts/chordis-song-book.eot");
+  src: url("../fonts/chordis-song-book.eot?#iefix") format("embedded-opentype"), url("../fonts/chordis-song-book.woff") format("woff"), url("../fonts/chordis-song-book.ttf") format("truetype"), url("../fonts/chordis-song-book.svg#chordis-song-book") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 [data-icon]:before {
-  font-family: "chordy-song-book" !important;
+  font-family: "chordis-song-book" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,7 +27,7 @@
 }
 [class^="font-svg-"]:before,
 [class*=" font-svg-"]:before {
-  font-family: "chordy-song-book" !important;
+  font-family: "chordis-song-book" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -85,6 +85,9 @@
 }
 .font-svg-folder2:before {
   content: "p";
+}
+.font-svg-arrow-right:before {
+  content: "q";
 }
 .wordwrap {
   white-space: pre-wrap;
@@ -247,10 +250,16 @@ i.jstree-icon.font-svg-folder2 {
   top: 165px;
   opacity: 0.5;
 }
+#switchSongTabSize {
+  position: fixed;
+  right: 40px;
+  top: 240px;
+  opacity: 0.5;
+}
 #showChordsLayer {
   position: fixed;
   right: 50px;
-  top: 240px;
+  top: 305px;
   opacity: 0.5;
 }
 #increaseChordFont {
@@ -353,11 +362,11 @@ div.ratings i:before {
 }
 #songRatings {
   position: fixed;
-  right: 120px;
+  right: 100px;
   bottom: 20px;
   opacity: 0.5;
 }
 #songRatings i:before {
-  font-size: 40px;
-  color: #aaaaaa;
+  font-size: 30px;
+  color: #d5cc1d;
 }

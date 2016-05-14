@@ -53,11 +53,18 @@
       vm.saveState();
     };
 
+    vm.switchSongTabSize = function () {
+      vm.songTabSize = vm.songTabSize == 8 ? 4 : 8;
+      vm.saveState();
+      vm.songLoaded(vm.song);
+    };
+
     vm.saveState = function () {
       localStorageService.set("songFontSize", vm.songFontSize);
       localStorageService.set("chordFontSize", vm.chordFontSize);
       localStorageService.set("chordLayerVisible", vm.chordLayerVisible);
       localStorageService.set("chordLayerPinned", vm.chordLayerPinned);
+      localStorageService.set("songTabSize", vm.songTabSize);
     };
 
     vm.hideChordsLayer = function () {
@@ -99,7 +106,7 @@
 
     vm.songLoaded = function (data) {
       vm.song = data;
-      vm.content = SongService.parseSong(vm.song.content, vm.chordSpaceRatio);
+      vm.content = SongService.parseSong(vm.song.content, vm.chordSpaceRatio, vm.songTabSize);
       $rootScope.pageTitle = vm.song.title;
       $timeout(function () {
         vm.scrollToTop();
@@ -132,6 +139,12 @@
     var candidateChordLayerPinned = localStorageService.get("chordLayerPinned");
     if (candidateChordLayerPinned != null) {
       vm.chordLayerPinned = candidateChordLayerPinned;
+    }
+
+    vm.songTabSize = 8;
+    var candidateSongTabSize = localStorageService.get("songTabSize");
+    if (candidateSongTabSize != null) {
+      vm.songTabSize = candidateSongTabSize;
     }
 
     vm.updateChordLayerPinned();

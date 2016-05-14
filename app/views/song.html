@@ -8,7 +8,8 @@
           ng-if="vm.song.year">({{vm.song.year}})</span></h3>
 
       <h2>{{vm.song.title}}</h2>
-      <h4 id="songContainerTop"><a href="/browse/{{vm.song.folderid}}"><i class="font-svg-folder h4"></i> {{vm.song.path}}</a></h4>
+      <h4 id="songContainerTop"><a href="/browse/{{vm.song.folderid}}"><i class="font-svg-folder h4"></i>
+        {{vm.song.path}}</a></h4>
     </div>
   </div>
 
@@ -29,7 +30,10 @@
             class="font-svg-up"></i></a>
       </div>
 
-      <div id="songRatings"><i class="font-svg-star-full" ng-repeat="n in [] | times:vm.song.rating"></i></div>
+      <div id="songRatings">
+        <i class="font-svg-star-full" ng-repeat="n in [] | times:vm.song.rating"></i>
+        <i class="font-svg-star-empty" ng-repeat="n in [] | times:5-vm.song.rating"></i>
+      </div>
 
       <div id="increaseFont">
         <a href="javascript://" ng-click="vm.increaseSongFont()" title="{{'g.increaseSongFont' | translate}}"><i
@@ -43,16 +47,17 @@
         <a href="javascript://" ng-click="vm.decreaseSongFont()" title="{{'g.decreaseSongFont' | translate}}"><i
             class="font-svg-minus"></i></a>
       </div>
+      <div id="switchSongTabSize">
+        <a href="javascript://" ng-click="vm.switchSongTabSize()" title="{{'g.switchSongTabSize' | translate}}"><i
+            class="font-svg-arrow-right"></i></a>
+      </div>
       <div id="showChordsLayer" ng-if="!vm.chordLayerVisible">
         <a href="javascript://" ng-click="vm.showChordsLayer()" title="{{'g.showChordsLayer' | translate}}"><i
             class="font-svg-chords"></i></a>
       </div>
 
-      <!--<div id="chordContainer" ng-style="{'font-size': vm.chordFontSize + 'em'}">
-        <div ng-repeat="sm in vm.content.chordLines" class="chordLine" >{{sm.line}}</div>
-      </div>-->
-
-      <div id="chordContainer" ng-style="{'font-size': vm.chordFontSize + 'em', 'position':vm.chordLayerPosition}" ng-if="vm.chordLayerVisible">
+      <div id="chordContainer" ng-style="{'font-size': vm.chordFontSize + 'em', 'position':vm.chordLayerPosition}"
+          ng-if="vm.chordLayerVisible">
         <div ng-repeat="stanza in vm.content.stanzas" class="stanza">
           <div ng-repeat="cl in stanza.lines" class="chordLine">{{cl.line}}</div>
         </div>

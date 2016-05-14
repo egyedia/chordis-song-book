@@ -14,13 +14,24 @@
 
     vm.searchTermChanged = function () {
       $location.path("/" + vm.searchTerm);
+      $location.search({"exactMatch": vm.exactMatch});
     };
 
     vm.doSearch = function (term) {
-      DataService.searchQuick(term).then(function (response) {
-        vm.searchResults = response.data;
+      var searchTerm = term;
+      if (vm.exactMatch) {
+        searchTerm = '"' + searchTerm + '"';
+      }
+      DataService.searchQuick(searchTerm).then(function (response) {
+        vm.titleList = response.data;
       });
     };
+
+    vm.exactMatch = false;
+    var searchObject = $location.search();
+    if (searchObject.hasOwnProperty('exactMatch') && searchObject.exactMatch) {
+      vm.exactMatch = true;
+    }
 
     if ($routeParams.term != null) {
       vm.searchTerm = $routeParams.term;
@@ -28,6 +39,6 @@
     } else {
       vm.searchTerm = "";
     }
-    jq("#searchTerm").focus();
+    //jq("#searchTerm").focus();
   }
 })();
