@@ -9,8 +9,8 @@
 
   function UrlService($http, $location) {
 
-    //var baseUrl = 'http://chordis-api.dubylon.com/';
-    var baseUrl = 'http://chordis-api.dubylon.comx:2222/';
+    var baseUrl = 'http://chordis-api.dubylon.com/';
+    //var baseUrl = 'http://chordis-api.dubylon.comx:2222/';
     var service = {};
 
     service.loadArtists = function () {
