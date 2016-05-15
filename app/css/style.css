@@ -370,3 +370,6 @@ div.ratings i:before {
   font-size: 30px;
   color: #d5cc1d;
 }
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
