@@ -118,7 +118,7 @@ body {
   cursor: pointer;
 }
 a {
-  color: #aa5555;
+  color: #000000;
 }
 html,
 body,
@@ -200,7 +200,7 @@ div.tableWrapper {
   box-shadow: 0px 0px 2px #aaaaaa;
   -webkit-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 i.jstree-icon.font-svg-chords {
   color: #cc0000;
@@ -321,12 +321,12 @@ div.songLine {
   line-height: 125%;
 }
 div.chordLine {
-  color: #5555aa;
+  color: #0000aa;
   font-weight: bold;
-  line-height: 200%;
-  -moz-tab-size: 6;
-    -o-tab-size: 6;
-       tab-size: 6;
+  line-height: 180%;
+  -moz-tab-size: 5;
+    -o-tab-size: 5;
+       tab-size: 5;
 }
 #chordContainer {
   white-space: pre-wrap;
