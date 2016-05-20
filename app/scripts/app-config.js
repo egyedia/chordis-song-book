@@ -54,6 +54,16 @@
           controller  : 'ReindexDataController',
           controllerAs: 'vm'
         })
+        .when('/about', {
+          templateUrl : 'views/about.html',
+          controller  : 'AboutController',
+          controllerAs: 'vm'
+        })
+        .when('/shortcuts', {
+          templateUrl : 'views/shortcuts.html',
+          controller  : 'ShortcutsController',
+          controllerAs: 'vm'
+        })
         .when('/song/:songId*', {
           templateUrl : 'views/song.html',
           controller  : 'SongController',

@@ -1,2 +1,3 @@
-# chordis-song-book
-Client application for song book REST API
+# Chordis Song Book - client application
+
+For demo, see: [Live site](http://chordis.dubylon.com/about)

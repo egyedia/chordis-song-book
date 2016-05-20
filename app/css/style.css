@@ -118,7 +118,7 @@ body {
   cursor: pointer;
 }
 a {
-  color: #000000;
+  color: #aa5555;
 }
 html,
 body,
@@ -200,7 +200,7 @@ div.tableWrapper {
   box-shadow: 0px 0px 2px #aaaaaa;
   -webkit-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
-  background-color: #ffffff;
+  background-color: #eeeeee;
 }
 i.jstree-icon.font-svg-chords {
   color: #cc0000;
@@ -369,7 +369,4 @@ div.ratings i:before {
 #songRatings i:before {
   font-size: 30px;
   color: #d5cc1d;
-}
-.navbar-inverse .navbar-nav > li > a {
-  color: #ffffff;
 }

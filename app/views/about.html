@@ -1,0 +1,98 @@
+<div ng-class="{'container-fluid': $root.fluid, 'container': !$root.fluid}">
+
+  <div ng-class="{'row-fluid': $root.fluid, 'row': !$root.fluid}">
+
+    <div class="col-md-12">
+      <h1 class="page-header" translate>pageTitle.about</h1>
+    </div>
+
+  </div>
+
+  <div ng-class="{'row-fluid': $root.fluid, 'row': !$root.fluid}">
+
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <h2>Motivation</h2>
+
+      <p class="text-justify">
+        Our small group of friends gathers occasionally to sing. We play the guitar, the keyboard, the glockenspiel, and
+        we sing.
+      </p>
+
+      <p class="text-justify">
+        Some songs we know by heart, others not, so we like to have the lyrics and chords in front of us.
+        There are lots of websites that store songs in chord or tab format.
+        Back in the days there was OLGA, and today you can find several websites with song collections.
+        They have auto scroll, they can show you the chords, simplify or transpose them.
+        We kept using these websites but we constantly ran into one big problem:
+      </p>
+
+      <p class="text-justify">
+        The lyrics are annotated with chords usually on the first verse and the chorus. After that, you just have the
+        lyrics.
+        So if you play the instrument and sing, and the song is scrolled down, you no longer see the chords.
+        Maybe that is not an issue for a pro, but we are just amateurs, our short-term memory is less good :)
+      </p>
+
+      <p class="text-justify">
+        The project mainly addresses this issue. Also, it parses your song collection (placed into a directory), and
+        makes that searchable using a web browser.
+      </p>
+
+      <h2>Status</h2>
+
+      <p class="text-justify">
+        The project should be considered Proof of Concept:
+      <ul>
+        <li>
+          It has no user management, so the song ratings of one user are overwritten by another user.
+        </li>
+        <li>
+          For the same reason the reindex feature can be started by anybody. This is why that feature is disabled in
+          this on-line demo.
+        </li>
+        <li>
+          Because of legal considerations, this on-line demo contains just a bunch of songs that hopefully do not violate
+          any copyrights.
+        </li>
+        <li>
+          The PHP backend is based on an old framework, it is not considered up-to-date. But it served the purpose
+          and the timeline of the project well.
+        </li>
+        <li>
+          Chord detection uses a heuristic algorithm with good results. But for real chord and scale detection, a
+          better one should be used (actually I have already written it in Java, I will translate it into JavaScript if the time
+          comes).
+        </li>
+      </ul>
+      </p>
+
+      <h2>Conclusion</h2>
+
+      <p class="text-justify">
+        Despite this project being only a proof of concept for the time being, we already had a successful guitar and singing night,
+        projecting the browser window on a white wall so that everyone can see it.
+        All that said, enjoy testing it out.
+      </p>
+
+      <h2>Code</h2>
+
+      <p class="text-justify">
+        The code can be found at:
+
+      <ul>
+        <li>
+          <a href="https://github.com/egyedia/chordis-song-book">https://github.com/egyedia/chordis-song-book</a>
+        </li>
+        <li>
+          <a href="https://github.com/egyedia/chordis-rest-php">https://github.com/egyedia/chordis-rest-php</a>
+        </li>
+      </ul>
+      </p>
+
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>

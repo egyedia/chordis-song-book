@@ -5,11 +5,19 @@
   "menu": {
     "title": "Chordis Song Book"
   },
+  "pageTitle": {
+    "about": "About the Project"
+  },
+  "help": {
+    "songView": "Song View"
+  },
   "g": {
     "searchQuick": "Quick Search",
     "searchByArtist": "Search by Artist",
     "settings": "Settings",
-    "ratings": "Rated Songs",
+    "ratings": "Songs with Ratings",
+    "about": "About",
+    "shortcuts": "Shortcuts",
     "browse": "Browse",
     "artists": "Artists",
     "songs": "Songs",
